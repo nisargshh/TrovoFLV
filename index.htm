@@ -3,41 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <title></title>
-  </head>
-  <body>
+    <link
+      href="http://www.mind.ilstu.edu/include/flv_player.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script
       type="text/javascript"
-      src="http://www.webestools.com/page/js/flashobject.js"
+      src="http://www.mind.ilstu.edu/include/swfobject.js"
     ></script>
-    <div id="player_5701" style="display: inline-block;">
-      <a href="http://get.adobe.com/flashplayer/"
-        >You need to install the Flash plugin</a
-      >
-      - <a href="http://www.webestools.com/">http://www.webestools.com/</a>
-    </div>
-    <script type="text/javascript">
-      var flashvars_5701 = {};
-      var params_5701 = {
-        quality: 'high',
-        wmode: 'transparent',
-        bgcolor: '#ffffff',
-        allowScriptAccess: 'always',
-        allowFullScreen: 'true',
-        flashvars:
-          'fichier=https%3A%2F%2Fliveplay.trovo.live%2Flive%2F73846_100000314_100000314.flv%3Fbizid%3D73846%26txSecret%3D1bf593439dde1177d0b791ab7ea6b0b3%26txTime%3D5f19ee9f&auto_play=true&apercu=http%3A%2F%2Fflash.webestools.com%2Fflv_player%2Fextract_elephant_dream.png',
-      };
-      var attributes_5701 = {};
-      flashObject(
-        'http://flash.webestools.com/flv_player/v1_28.swf',
-        'player_5701',
-        '720',
-        '405',
-        '8',
-        false,
-        flashvars_5701,
-        params_5701,
-        attributes_5701,
-      );
-    </script>
+  </head>
+  <body>
+    <object
+      type="application/x-shockwave-flash"
+      data="http://flv-player.net/medias/player_flv.swf"
+      width="320"
+      height="240"
+    >
+      <param name="movie" value="http://flv-player.net/medias/player_flv.swf" />
+      <param name="allowFullScreen" value="true" />
+      <param
+        name="FlashVars"
+        value="flv=https%3A//liveplay.trovo.live/live/73846_100000314_100000314.flv%3Fbizid%3D73846%26txSecret%3D1bf593439dde1177d0b791ab7ea6b0b3%26txTime%3D5f19ee9f&amp;autoplay=1"
+      />
+    </object>
   </body>
 </html>
