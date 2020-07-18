@@ -3,29 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <title></title>
-    <link
-      href="http://www.mind.ilstu.edu/include/flv_player.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script
-      type="text/javascript"
-      src="http://www.mind.ilstu.edu/include/swfobject.js"
-    ></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
-    <object
-      type="application/x-shockwave-flash"
-      data="http://flv-player.net/medias/player_flv.swf"
-      width="320"
-      height="240"
-    >
-      <param name="movie" value="http://flv-player.net/medias/player_flv.swf" />
-      <param name="allowFullScreen" value="true" />
-      <param
-        name="FlashVars"
-        value="flv=https%3A//liveplay.trovo.live/live/73846_100000314_100000314.flv%3Fbizid%3D73846%26txSecret%3D1bf593439dde1177d0b791ab7ea6b0b3%26txTime%3D5f19ee9f&amp;autoplay=1"
-      />
-    </object>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.5.0/flv.min.js"></script>
+    <div class="container">
+      <video id="videoElement" controls autoplay></video>
+    </div>
+
+    <script>
+      if (flvjs.isSupported()) {
+        var videoElement = document.getElementById('videoElement');
+        var flvPlayer = flvjs.createPlayer({
+          type: 'flv',
+          isLive: true,
+          url:
+            'https://liveplay.trovo.live/live/73846_100058143_100058143.flv?bizid=73846&txSecret=ea876a87a5edf4f574ce9a65696d9d1b&txTime=5f1b75aa',
+        });
+        flvPlayer.attachMediaElement(videoElement);
+        flvPlayer.load();
+        flvPlayer.play();
+      }
+    </script>
   </body>
 </html>
