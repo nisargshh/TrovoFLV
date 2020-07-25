@@ -12,3 +12,10 @@
   height: 100%;
   width: 100%;
 }
+
+.error{
+  z-index: 100;
+  position: static;
+  width: 100vw;
+  height: 100vh;
+}
